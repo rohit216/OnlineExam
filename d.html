@@ -1,0 +1,77 @@
+<?php
+ session_start();
+session_destroy();
+header("Location: d.html");
+    exit;
+ ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="" />
+
+	<title>
+	</title>
+	<script language="javascript">
+	function check34()
+	{
+		if(document.form1.user.value=="")
+		{
+			alert("Please enter your Roll_No");
+			document.form1.user.focus();
+			return false;
+		}
+		if(document.form1.pass.value=="")
+		{
+			alert("Please Enter your password");
+			document.form1.pass.focus();
+			return false;
+		}
+		return true;
+	}
+	</script>
+</head>
+
+</head>
+
+<body background="LIGHT.jpg">
+<!marquee><center> <b> <font color="red" size="13"> *** Online Examination System *** </font></marquee>
+<fieldset style="backface-visibility: visible;">
+<table border="0" align="right">
+  <form name="form1" method="post" action="login_test.php" onSubmit="return check34();">
+    <tr>
+      <td> Roll No : </td>
+      <td> <input type="text" name="user"></td>
+    </tr>
+    <tr>
+      <td><!font color="red">
+        <label><b> Password :</b></label>
+      </font></td>
+      <td><font color="red">
+        <input type="password" name="pass">
+      </font></td>
+    </tr>
+    <td> </td>
+      <td><input type="submit" name="submit" value="Login"> 
+     <input type="reset" name="reset" value="Reset">
+    </td>
+	</tr>
+    <tr>
+	<td> </td>
+      <td><font color="red"><a href="ge.php"> <b>Forget Password </b> </a> </font></td>
+    </tr>
+  </form>
+  <br>
+  <form name="form2" method="post" action="Login.php">
+    <tr>
+      <td></td>
+      <td><a href="register.php"> Register Now<!img src="register.jpg" align="center" height="50" width="100"> </a> </td>
+    </tr>
+  </form>
+</table>
+<p><span class="error"></span><font color="RED" size="20"><img src="slide.jpg" height="350" width="600" align="left"></font> </p>
+</fieldset>
+
+
+</body><!--~DMENU~-->
+</html>
